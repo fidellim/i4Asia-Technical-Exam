@@ -1,0 +1,28 @@
+.top-footer {
+    height: 30px;
+    background: linear-gradient(45deg, #cc6666, #2867c9);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #0f3861;
+    padding: 2.5rem 2rem;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 1rem;
+
+        li {
+            font-weight: bold;
+        }
+    }
+
+    h2 {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
