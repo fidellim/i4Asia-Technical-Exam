@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -6,9 +6,15 @@ const Footer = () => {
             <div className="top-footer"></div>
             <div className="footer-container">
                 <ul>
-                    <li>Home</li>
-                    <li>Tickets</li>
-                    <li>Solutions</li>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/ticket-status">Tickets</Link>
+                    </li>
+                    <li>
+                        <Link to="/solutions">Solutions</Link>
+                    </li>
                 </ul>
                 <h2>© 2022 Freshdesk DemoPh</h2>
             </div>

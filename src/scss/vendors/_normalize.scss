@@ -90,6 +90,13 @@ pre {
 
 a {
     background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /**
