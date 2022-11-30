@@ -1,0 +1,9 @@
+.login-container {
+    min-height: calc(100vh - 134px);
+    background-image: url(/src/assets/login_background.png), linear-gradient(.25turn, #155bdd, #cc6666);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    // padding: 242px 0 0 0;
+    padding: 82px 0 0 0;
+}
