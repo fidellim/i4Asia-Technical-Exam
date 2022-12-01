@@ -2,10 +2,17 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
     const [toggleHamburger, setToggleHamburger] = useState(false)
     const { pathname } = useLocation()
+
+    let navigate = useNavigate()
+
+    const handleSignOut = () => {
+        navigate(`/login`)
+    }
 
     const handleHamburger = () => {
         setToggleHamburger((prev) => !prev)
@@ -53,7 +60,12 @@ const Header = () => {
                 {pathname !== '/login' && (
                     <div className="header-btns">
                         <button className="btn header-btn">Edit Profile</button>
-                        <button className="btn header-btn">Sign out</button>
+                        <button
+                            className="btn header-btn"
+                            onClick={handleSignOut}
+                        >
+                            Sign out
+                        </button>
                     </div>
                 )}
             </div>

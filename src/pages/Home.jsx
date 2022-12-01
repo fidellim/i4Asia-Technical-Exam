@@ -5,6 +5,7 @@ import general from '../assets/general.png'
 import faq from '../assets/faq.png'
 import freshchat from '../assets/freshchat.png'
 import HomeCard from '../components/HomeCard'
+import { useNavigate } from 'react-router-dom'
 
 const homeData = [
     {
@@ -62,6 +63,15 @@ const homeData = [
 ]
 
 const Home = () => {
+    let navigate = useNavigate()
+
+    const handleNewSupportTicket = () => {
+        navigate(`/submit-ticket`)
+    }
+    const handleTicketStatus = () => {
+        navigate(`/ticket-status`)
+    }
+
     return (
         <div className="container">
             <div className="main-top">
@@ -81,11 +91,17 @@ const Home = () => {
                     </button>
                 </div>
                 <div className="main-top-btns">
-                    <button className="btn ticket-btn">
+                    <button
+                        className="btn ticket-btn"
+                        onClick={handleNewSupportTicket}
+                    >
                         <img src={ticket} alt="" />
                         New Support Ticket
                     </button>
-                    <button className="btn ticket-btn">
+                    <button
+                        className="btn ticket-btn"
+                        onClick={handleTicketStatus}
+                    >
                         <img src={ticketPlus} alt="" />
                         Check Ticket Status
                     </button>
