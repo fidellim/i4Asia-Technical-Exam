@@ -8,13 +8,15 @@
 
 .ts-top {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 1rem;
     text-align: center;
 
     h1 {
         line-height: 2.25rem;
+        font-size: 2.5rem;
     }
 
     p {
@@ -22,13 +24,50 @@
     }
 }
 
+.ts-top-btns,
+.dropdowns-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ts-top-btns {
+    gap: 1rem;
+}
+
+.dropdowns-container {
+    gap: .5rem;
+}
+
+.export-ticket-white-btn {
+    gap: .5rem;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: .75rem;
+    color: white;
+    font-weight: bold;
+}
+
+.ts-bottom {
+    padding: 60px .75rem 60px .75rem;
+}
+
 // desktop
 @media screen and (min-width: 1024px) {
 
-    .ts-top {
+    .ts-top,
+    .ts-bottom {
         justify-content: flex-start;
         max-width: 950px;
         width: 100%;
         margin: 0 auto;
+    }
+
+    .ts-top {
+        max-width: 950px;
+    }
+
+    .ts-bottom {
+        max-width: 900px;
     }
 }
