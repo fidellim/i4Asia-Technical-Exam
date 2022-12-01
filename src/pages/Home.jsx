@@ -1,6 +1,65 @@
 import arrowRight from '../assets/right-arrow.svg'
 import ticket from '../assets/ticket.png'
 import ticketPlus from '../assets/ticket-plus.png'
+import general from '../assets/general.png'
+import faq from '../assets/faq.png'
+import freshchat from '../assets/freshchat.png'
+import HomeCard from '../components/HomeCard'
+
+const homeData = [
+    {
+        title: 'GENERAL',
+        icon: general,
+        topics: [
+            {
+                title: 'CS Template',
+                number: 2,
+                subheadings: ['Delivery Matters', 'Price Discrepancy Template'],
+            },
+            {
+                title: 'Delivery Team Template',
+                number: 1,
+                subheadings: ['Stocks Matters'],
+            },
+        ],
+    },
+    {
+        title: 'FRESHCHAT CATEGORY',
+        icon: freshchat,
+        topics: [
+            {
+                title: 'Demo Ph',
+                number: 4,
+                subheadings: [
+                    'Order History',
+                    'Invalid Token',
+                    'Delivery Status',
+                    'Reset your password',
+                ],
+            },
+            {
+                title: 'Delivery Status',
+                number: 2,
+                subheadings: ['Delivery Status'],
+            },
+        ],
+    },
+    {
+        title: 'FAQs',
+        icon: faq,
+        topics: [
+            {
+                title: 'FAQs',
+                number: 3,
+                subheadings: [
+                    'Client Rep User Guide',
+                    'Password Reset Troubleshooting Guide',
+                    'Customer User Guide',
+                ],
+            },
+        ],
+    },
+]
 
 const Home = () => {
     return (
@@ -32,7 +91,11 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-            <div className="main-button"></div>
+            <div className="main-bottom">
+                {homeData.map((data) => {
+                    return <HomeCard key={data.title} data={data} />
+                })}
+            </div>
         </div>
     )
 }
