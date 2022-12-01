@@ -1,8 +1,15 @@
 import profile from '../assets/profile-male.png'
 import headset from '../assets/headset.png'
 import arrowRight from '../assets/arrow-right.png'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    let navigate = useNavigate()
+
+    const handleLogin = () => {
+        navigate(`/`)
+    }
+
     return (
         <div className="login-container">
             <div className="login-width-container">
@@ -26,7 +33,10 @@ const Login = () => {
                                 Forgot your password?
                             </a>
                         </div>
-                        <button className="btn login-white-btn">
+                        <button
+                            className="btn login-white-btn"
+                            onClick={handleLogin}
+                        >
                             <img src={profile} alt="" />
                             LOGIN
                         </button>
@@ -38,7 +48,10 @@ const Login = () => {
                         <img className="headset" src={headset} alt="" />
                     </div>
                     <p>Are you an agent?</p>
-                    <button className="btn login-here-btn">
+                    <button
+                        className="btn login-here-btn"
+                        onClick={handleLogin}
+                    >
                         LOGIN HERE{' '}
                         <div className="arrow-right-container">
                             <img src={arrowRight} alt="" />
