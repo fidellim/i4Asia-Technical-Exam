@@ -83,6 +83,30 @@
     transform: translate(0, -11px) rotate(45deg);
 }
 
+.header-right-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-btn {
+    border: 0;
+    border-radius: 5px;
+    gap: 1rem;
+    padding: .75rem 1rem;
+    font-size: .85rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0f3861;
+}
+
 // desktop
 @media screen and (min-width: 1024px) {
     .header-container {
@@ -110,7 +134,9 @@
     }
 
     .header-right-container {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
     }
 
     .hr-line {
