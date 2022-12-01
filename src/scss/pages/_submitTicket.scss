@@ -6,9 +6,14 @@
     padding: 90px .75rem 60px .75rem;
 }
 
+.submit-ticket-bottom-container {
+    color: black;
+    padding: 60px .75rem 60px .75rem;
+}
+
 .submit-ticket-top {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     text-align: center;
@@ -22,10 +27,130 @@
     }
 }
 
+.submit-ticket-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+
+        h3 {
+            font-size: 1rem;
+            width: 225px;
+
+            span {
+                color: red;
+            }
+        }
+    }
+
+    input[type=text],
+    input[type=date] {
+        max-width: 500px;
+        width: 100%;
+        padding: .65rem .5rem;
+        border-radius: 5px;
+        border: 1px solid rgb(172, 172, 172);
+    }
+
+    input[type=date]:required:invalid::-webkit-datetime-edit {
+        color: transparent;
+    }
+
+    input[type=date]:focus::-webkit-datetime-edit {
+        color: black !important;
+    }
+
+    input[type=date]::-webkit-calendar-picker-indicator {
+
+        background: url(/src/assets/calendar.jpg) no-repeat;
+
+    }
+}
+
+.description-right-container {
+    max-width: 500px;
+    width: 100%;
+
+    .text-editor-container {
+        border: 1px solid rgb(172, 172, 172);
+        border-radius: 5px;
+        overflow: hidden;
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            background-color: #f8f9fb;
+            border-bottom: 1px solid rgb(172, 172, 172);
+
+            img {
+                cursor: pointer;
+            }
+
+            .vertical-line {
+                height: 20px;
+                border-left: 1px solid rgb(172, 172, 172);
+            }
+        }
+    }
+
+    textarea {
+        display: block;
+        max-width: 500px;
+        width: 100%;
+        resize: none;
+        padding: 1rem;
+        border: 0;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+}
+
+.attach-file {
+    margin-left: .75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #155bdd;
+    cursor: pointer;
+}
+
+.submit-ticket-btns {
+    display: flex;
+    gap: .5rem;
+    margin-top: 1rem;
+
+    .submit-btn,
+    .cancel-btn {
+        border: 0;
+        border-radius: 5px;
+        width: 115px;
+        padding: .75rem 1rem;
+        font-size: .85rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .submit-btn {
+        background-color: #0f3861;
+    }
+
+    .cancel-btn {
+        background-color: #727272;
+    }
+}
+
 // desktop
 @media screen and (min-width: 1024px) {
 
-    .submit-ticket-top {
+    .submit-ticket-top,
+    .submit-ticket-bottom {
         justify-content: flex-start;
         max-width: 950px;
         width: 100%;
