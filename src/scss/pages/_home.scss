@@ -1,0 +1,80 @@
+.main-top {
+    background-image: url(/src/assets/main-bg.png), linear-gradient(.25turn, #155bdd, #cc6666);
+    padding: 90px .75rem 90px .75rem;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+
+    h1 {
+        line-height: 2.25rem;
+    }
+
+    p {
+        max-width: 500px;
+    }
+}
+
+.search-bar {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+
+    input[type=text] {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        border: 0;
+    }
+
+    input[type=text]::placeholder {
+        color: black;
+    }
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    background-color: transparent;
+    border: 0;
+    transform: translate(0%, -50%);
+
+    h3 {
+        display: none;
+        font-size: 1rem;
+        color: #155bdd;
+    }
+
+    img {
+        height: 20px;
+        width: auto;
+        filter: invert(24%) sepia(95%) saturate(2548%) hue-rotate(214deg) brightness(89%) contrast(94%)
+    }
+}
+
+.main-top-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+    .search-btn {
+
+        h3 {
+            display: block;
+        }
+    }
+}
