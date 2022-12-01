@@ -23,3 +23,27 @@
     align-items: center;
     justify-content: center;
 }
+
+.container {
+    min-height: calc(100vh - 134px);
+}
+
+button {
+    cursor: pointer;
+}
+
+.ticket-btn {
+    gap: .5rem;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: .75rem;
+    color: white;
+    font-size: .85rem;
+    font-weight: bold;
+
+    img {
+        height: 20px;
+        width: auto;
+    }
+}
