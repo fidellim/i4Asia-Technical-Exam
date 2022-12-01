@@ -1,4 +1,5 @@
 import down from '../assets/down.png'
+import expandArrow from '../assets/expand-arrow.png'
 import { useState } from 'react'
 
 const Dropdown = ({ data }) => {
@@ -10,10 +11,16 @@ const Dropdown = ({ data }) => {
     }
     return (
         <div className="dropdown-container" onClick={handleToggle}>
-            <h5>{title}</h5>
-            <div className="dropdown-menu">
-                {current} <img src={down} alt="" />
-            </div>
+            {title && <h5>{title}</h5>}
+            {current && (
+                <div
+                    className={`dropdown-menu ${
+                        title ? 'w-175 border-l-1' : 'w-250 border-1'
+                    }`}
+                >
+                    {current} <img src={title ? down : expandArrow} alt="" />
+                </div>
+            )}
 
             <div
                 className={`dropdown-list ${
