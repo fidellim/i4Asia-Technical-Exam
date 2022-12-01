@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import { useLocation } from 'react-router-dom'
 
 const Header = () => {
     const [toggleHamburger, setToggleHamburger] = useState(false)
+    const { pathname } = useLocation()
 
     const handleHamburger = () => {
         setToggleHamburger((prev) => !prev)
@@ -24,9 +26,9 @@ const Header = () => {
                         }`}
                         onClick={handleHamburger}
                     >
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
+                        <div className="bar1"></div>
+                        <div className="bar2"></div>
+                        <div className="bar3"></div>
                     </div>
                 </div>
                 <div className="hr-line"></div>
@@ -44,10 +46,16 @@ const Header = () => {
             </div>
             <div
                 className={`header-right-container ${
-                    toggleHamburger ? 'display' : 'hide'
+                    toggleHamburger ? 'displayFlex' : 'hide'
                 }`}
             >
-                <h2>Welcome!</h2>
+                <h2>{pathname === '/login' ? 'Welcome!' : 'Welcome User'}</h2>
+                {pathname !== '/login' && (
+                    <div className="header-btns">
+                        <button className="btn header-btn">Edit Profile</button>
+                        <button className="btn header-btn">Sign out</button>
+                    </div>
+                )}
             </div>
         </div>
     )
