@@ -53,8 +53,12 @@ const ticketData = [
 
 const TicketStatus = () => {
     return (
-        <div>
-            <h1>Ticket Status</h1>
+        <div className="container">
+            <div className="ts-top-container">
+                <div className="ts-top">
+                    <h1>Ticket Status</h1>
+                </div>
+            </div>
 
             {ticketData.map((ticket, index) => (
                 <div key={index}>

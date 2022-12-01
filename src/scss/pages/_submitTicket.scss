@@ -1,0 +1,34 @@
+.submit-ticket-top-container {
+    background-image: url(/src/assets/main-bg.png), linear-gradient(.25turn, #155bdd, #cc6666);
+    background-size: cover;
+    background-position: top;
+    background-blend-mode: overlay;
+    padding: 90px .75rem 60px .75rem;
+}
+
+.submit-ticket-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+
+    h1 {
+        line-height: 2.25rem;
+    }
+
+    p {
+        max-width: 500px;
+    }
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+
+    .submit-ticket-top {
+        justify-content: flex-start;
+        max-width: 950px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
