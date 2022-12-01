@@ -56,8 +56,8 @@ const TicketStatus = () => {
         <div>
             <h1>Ticket Status</h1>
 
-            {ticketData.map((ticket) => (
-                <div>
+            {ticketData.map((ticket, index) => (
+                <div key={index}>
                     <div>
                         <h3>{ticket.title}</h3>
                         <p>
