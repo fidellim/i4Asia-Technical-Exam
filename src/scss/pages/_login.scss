@@ -34,7 +34,7 @@
     input[type=password] {
         border: 0;
         border-radius: 25px;
-        max-width: 400px;
+        max-width: 450px;
         padding: 1rem 1.5rem;
     }
 
@@ -47,7 +47,7 @@
 .submit-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .login-white-btn {
@@ -112,4 +112,25 @@
     background-color: white;
     border-radius: 50%;
     padding: .5rem;
+}
+
+// desktop
+@media screen and (min-width: 1024px) {
+    .login-width-container {
+        width: 900px;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 3rem;
+            line-height: 3.35rem;
+            max-width: 700px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .login-width-container {
+        width: 400px;
+        margin: 0 auto;
+    }
 }
