@@ -5,5 +5,111 @@
     background-position: center;
     background-blend-mode: overlay;
     // padding: 242px 0 0 0;
-    padding: 82px 0 0 0;
+    padding: 82px .75rem 0 .75rem;
+
+    h1 {
+        line-height: 2.25rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+
+    input[type=text] {
+        margin-bottom: 1rem;
+    }
+
+    input[type=password] {
+        margin-bottom: 2rem;
+    }
+
+    input[type=checkbox] {
+        margin-right: 1rem;
+    }
+
+    input[type=text],
+    input[type=password] {
+        border: 0;
+        border-radius: 25px;
+        max-width: 400px;
+        padding: 1rem 1.5rem;
+    }
+
+    input[type=text]::placeholder,
+    input[type=password]::placeholder {
+        color: black;
+    }
+}
+
+.submit-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.login-white-btn {
+    gap: .5rem;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: .75rem;
+    color: white;
+    font-weight: bold;
+}
+
+.forgot-password {
+    text-decoration: underline;
+}
+
+.arrow-right-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(.8);
+    // padding: 10px 20px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-here-btn {
+    border: 0;
+    border-radius: 5px;
+    gap: 1rem;
+    padding: .45rem .6rem;
+    font-size: .85rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0f3861;
+}
+
+.agent-container {
+    padding: 8rem 0 4rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.headset-container {
+    background-color: white;
+    padding: .2rem;
+    width: fit-content;
+    height: auto;
+    border-radius: 50%;
+}
+
+.headset {
+    display: block;
+    border: 1px solid rgba(21, 91, 221, .3);
+    background-color: white;
+    border-radius: 50%;
+    padding: .5rem;
 }

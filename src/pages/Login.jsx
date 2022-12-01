@@ -1,7 +1,51 @@
-import React from 'react'
+import profile from '../assets/profile-male.png'
+import headset from '../assets/headset.png'
+import arrowRight from '../assets/arrow-right.png'
 
 const Login = () => {
-    return <div className="login-container">Login</div>
+    return (
+        <div className="login-container">
+            <h1>Welcome to our customer support portal.</h1>
+            <form className="login-form">
+                <input type="text" placeholder="Your email address" />
+                <input type="password" placeholder="Password" />
+                <div className="submit-container">
+                    <div>
+                        <div>
+                            <input
+                                type="checkbox"
+                                name="remember"
+                                id="remember"
+                            />
+                            <label htmlFor="remember">
+                                Remember me on this computer
+                            </label>
+                        </div>
+                        <a className="forgot-password" href="#">
+                            Forgot your password?
+                        </a>
+                    </div>
+                    <button className="btn login-white-btn">
+                        <img src={profile} alt="" />
+                        LOGIN
+                    </button>
+                </div>
+            </form>
+
+            <div className="agent-container">
+                <div className="headset-container">
+                    <img className="headset" src={headset} alt="" />
+                </div>
+                <p>Are you an agent?</p>
+                <button className="btn login-here-btn">
+                    LOGIN HERE{' '}
+                    <div className="arrow-right-container">
+                        <img src={arrowRight} alt="" />
+                    </div>
+                </button>
+            </div>
+        </div>
+    )
 }
 
 export default Login
